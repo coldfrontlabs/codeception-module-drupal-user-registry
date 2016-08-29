@@ -243,7 +243,7 @@ class DrushTestUserManager implements TestUserManagerInterface
      */
     protected function prepareDrushCommand($cmd)
     {
-        $baseCmd = sprintf("drush -y %s", escapeshellarg($this->alias));
+        $baseCmd = sprintf("drush -y %s", $this->alias);
         $cmd = "$baseCmd $cmd";
         Debug::debug($cmd);
         return $cmd;
