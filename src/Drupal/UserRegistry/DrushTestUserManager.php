@@ -125,7 +125,7 @@ class DrushTestUserManager implements TestUserManagerInterface
                 if ($role != "Authenticated") {
                     $this->runDrush(
                         sprintf(
-                            "user-add-role %s --name=%s",
+                            "user-add-role %s %s",
                             escapeshellarg($role),
                             escapeshellarg($user->name)
                         )
